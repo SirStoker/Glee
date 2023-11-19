@@ -3,8 +3,123 @@
 @import 'reset';
 @import 'global';
 
+.header {
+    max-width: 1790px;
+    height: 140px;
+    background-color: #f8fbfc;
+    padding: 10px;
+
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+
+    &__logo {
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo-txt {
+        color: #436372;
+        @extend %rubik-500;
+        font-size: 36px;
+        line-height: 58px;
+        padding-left: 15px;
+    }
+
+    &__menu-item+.header-wrapper__menu-item {
+        padding-left: 30px;
+
+    }
+
+    &__menu-list {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        align-items: center;
+    }
+
+    &__menu-link {
+        color: #436372;
+        @extend %rubik-500;
+        font-size: 15px;
+        line-height: 12px;
+    }
+}
 
 
+.user-nav {
+    display: flex;
+    align-items: center;
 
+    &__link {
+        position: relative;
+        width: 50px;
+        height: 50px;
+
+    }
+
+    &__img {
+        margin: 18px auto 0;
+    }
+
+    &__num {
+        position: absolute;
+        top: 13px;
+        line-height: 15px;
+        right: 26px;
+        text-align: center;
+        font-size: 10px;
+        background-color: #fff;
+        border-radius: 50%;
+        width: 15px;
+        height: 15px;
+        color: #000;
+    }
+}
+
+.search {
+    margin-right: 20px;
+    background-color: #edf1f4;
+    border-radius: 50%;
+
+}
+
+.menu-burg {
+    margin-left: 20px;
+    border-radius: 50%;
+    background-color: #a3bbc8;
+
+    & img {
+        margin: 15px auto 0;
+    }
+}
+
+.heart {
+    width: 90px;
+    background-color: #fcd7b6;
+    border-radius: 50px 0 0 50px;
+    position: relative;
+
+    &::before {
+        content: "";
+        right: 0;
+        top: 10px;
+        height: 30px;
+        width: 1px;
+        background-color: #fff;
+        position: absolute;
+
+    }
+}
+
+.shape {
+    width: 90px;
+    border-radius: 0 50px 50px 0;
+    background-color: #fcd7b6;
+
+}
 
 @import 'media';
